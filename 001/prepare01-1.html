@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<!-- Example code: JavaScript can interact with and manipulate HTML elements dynamically. -->
+
+<head>
+    <title>DOM Manipulation</title>
+    <script>
+        function changeText() {
+            document.getElementById("myText").innerHTML = "Text changed!";
+        }
+    </script>
+</head>
+
+<body>
+    <p id="myText">This is the original text.</p>
+    <button onclick="changeText()">Change Text</button>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Async vs Defer</title>
+    <script src="analytics.js" async></script> <!-- Loads and executes independently -->
+    <script src="main.js" defer></script> <!-- Waits for HTML parsing to complete -->
+</head>
+
+<body>
+    <h1>Hello, World!</h1>
+</body>
+
+</html>

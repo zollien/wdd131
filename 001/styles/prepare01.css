@@ -1,0 +1,137 @@
+/* Use CSS Grid on the body of the document to support the given layout. */
+img {
+    width: 50%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*grid template*/
+.grid-container {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    font-family: "Roboto";
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    border: 30px grey solid;
+    padding: 30px;
+}
+
+/*the grid is 4 colums wide*/
+/*header and footer goes across all 4, left side just 1to2, main2-3, right 3-4*/
+.header {
+    display: grid;
+    grid-column: 1/4;
+    background-color: #ca5050;
+    margin: 20px;
+    padding: 20px 16px;
+    justify-content: center;
+}
+
+.left-sidebar {
+    display: grid;
+    grid-column: 1/2;
+    background-color: #4464ae;
+}
+
+.main {
+    display: grid;
+    grid-column: 2/3;
+    height: auto;
+    border: 30px grey solid;
+    margin: 20px 20px 50px 110px;
+    padding: 50px;
+    background-color: #f1f1f1;
+}
+
+.right-sidebar {
+    display: grid;
+    grid-column: 3/4;
+    background-color: #60c389;
+}
+
+/*footer {} will also do the same job without double naming it*/
+
+.footer {
+    display: grid;
+    grid-column: 1/4;
+    background-color: #ecea67;
+}
+
+/* Use CSS Flex to support the navigation menu. */
+nav.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* stops boxes from wrapping on next line */
+    background-color: DodgerBlue;
+}
+
+nav.flex-container>div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+/* this css for list design can be used in teh navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+
+/* The color schema and font family choices are yours. */
+
+
+
+
+
+
+
+
+/* */
+/* */
+/* For table about script defer and async */
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 2px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}

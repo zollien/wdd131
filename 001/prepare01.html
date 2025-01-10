@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---->
+<!--JavaScript task to be added to this html-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Zollien Dove" />
+    <!--Always use appropriate title content. In this assignment, include your name and WDD 131.-->
+    <title>Basic Layout | Zollien Dove | WDD131</title>
+    <meta name="description" content="Basic HTML Layout for Z." />
+    <!--css link-->
+    <link rel="stylesheet" href="styles/prepare01.css" />
+    <!-- links font to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!--internal javascript for button on line 62 (alert)-->
+    <script>
+        function greet() {
+            alert('Hello Inside! - Using Internal Javascript');
+        }
+    </script>
+    <!--this placement in the head is not common because it will load before the page and may delay page rendering-->
+</head>
+
+<body class="grid-container">
+
+    <!---->
+    <h1>Prepare01</h1>
+    <header class="header">
+        <!--Ensure that your navigation container element is contained within the header element-->
+        <nav a>
+            <!--this navigaation bar contains a flexible box.  divided into 4 parts-->
+
+            <div class="flex-container">
+                <div>Home</div>
+                <div>About</div>
+                <div>Contact</div>
+                <div>Shop</div>
+            </div>
+        </nav>
+
+        <h1 contenteditable> Basic Layout Html</h1>
+        <!--Include the placeholder content, e.g., "Header Content", etc.-->
+    </header>
+
+    <!--sidebars-->
+    <div class="left-sidebar" contenteditable>Left Sidebar
+        <img src="images/profile.jpg" alt="this is Zi">
+        <button onclick="greet()">Button Internal</button>
+    </div>
+
+    <!--main-->
+    <main class="main" contenteditable>Main content
+        <section>
+            <h2>Comparison of async and defer</h2>
+
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>When Script Loads</th>
+                    <th>When Script Executes</th>
+                    <th>Order of Execution</th>
+
+                </tr>
+                <tr>
+                    <td>Default </td>
+                    <td>During HTML parsing (blocking) </td>
+                    <td>Immediately after loading (blocking) </td>
+                    <td>In document order </td>
+                </tr>
+                <tr>
+                    <td>async </td>
+                    <td>During HTML parsing (non-blocking) </td>
+                    <td>As soon as the script is ready </td>
+                    <td>Unpredictable </td>
+                </tr>
+                <tr>
+                    <td>defer </td>
+                    <td>During HTML parsing (non-blocking) </td>
+                    <td>After HTML parsing is complete </td>
+                    <td>In document order </td>
+                </tr>
+
+            </table>
+        </section>
+    </main>
+
+    <!--internal javascript stored in <head> section-->
+
+    <div class="right-sidebar" contenteditable>Right Sidebar
+        <!--this buttons internal javascript is sitting in the opening tage of the  div for the sidebar-->
+        <button onclick="alert('Hello, World! Using external Javascript')">Button External</button>
+    </div>
+    <!--External javascript for button on line 55 (greet)-->
+    <script src="scripts/prepare01.js" defer></script>
+    <!--this links the code to the correct javascript file - prepare01.js-->
+    <!--this places the script at the end of the body so it loads after the page fully loads--><!--defer in script tag make js code load after all html - it is deferred-->
+    <script src="scripts/prepare01.js" async></script>
+    <!--this js code with run asybchronously, potentially inturrupting the html loading-->
+
+    <p> </p>
+    <footer class="footer" contenteditable>Footer Content</footer>
+
+</body>
+
+</html>
