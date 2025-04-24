@@ -6,10 +6,6 @@
     font-size: 20px;
     background-color: #ffffff;
 }
-img {
-    max-width: 150px;
-    text-align: center;
-}
 
 h1 {
     text-align: center;
@@ -52,5 +48,8 @@ li {
 
 footer {
     text-align: center;
-  
+}
+img {
+    max-width: 150px;
+    text-align: center;
 }
