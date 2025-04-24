@@ -36,13 +36,11 @@ p {
     padding: 10px;
     font-size: 20px;
     font-weight: 500;
-    font-stretch: wider;
 }
 
 ol {
     margin: 20px;
     line-height: 1.5;
-
 }
 
 li {
